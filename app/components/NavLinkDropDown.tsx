@@ -56,7 +56,7 @@ export default function NavLinkDropdown({
       return () => document.removeEventListener("mouseover", handleHover);
     } else {
       // Touch devices (phones + tablets + touch laptops)
-      function handleClick(event: MouseEvent) {
+      function handleClick(event: TouchEvent) {
         if (
           dropdownRef.current &&
           dropdownRef.current.contains(event.target as Node)
@@ -67,8 +67,8 @@ export default function NavLinkDropdown({
         }
       }
 
-      document.addEventListener("click", handleClick);
-      return () => document.removeEventListener("click", handleClick);
+      document.addEventListener("touchstart", handleClick);
+      return () => document.removeEventListener("touchstart", handleClick);
     }
   }, []);
 
