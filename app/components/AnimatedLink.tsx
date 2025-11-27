@@ -51,52 +51,37 @@ export default function AnimatedLink() {
           />
         </div>
 
-        {/* Ripple effect */}
-        {isHovered && (
-          <div
-            className="absolute inset-0 rounded-xl bg-[#8DD1BA] animate-ping opacity-20"
-            style={{ animationDuration: "0.5s" }}
-          />
-        )}
+        
       </div>
 
       {/* Text with slide animation */}
       <span
-        className="relative font-medium transition-all duration-500 z-10"
+        className="relative font-medium transition-all duration-300 z-10"
         style={{
-          fontFamily: "Poppins, sans-serif",
+          fontFamily: "Poppins",
           transform: isHovered ? "translateX(6px)" : "translateX(0px)",
           color: isHovered ? "#2D2D2D" : "#4D4D4D",
-          fontWeight: isHovered ? "600" : "500",
+          // fontWeight: isHovered ? "600" : "500",
         }}
       >
         Plan vandaag nog een consult met Rutger
-        {/* Underline animation */}
       </span>
 
       {/* Shimmer effect */}
       <div
-        className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 pointer-events-none rounded-2xl"
+        className="absolute inset-0 bg-linear-to-r from-[white] via-[white] to-transparent transition-transform duration-1000 pointer-events-none rounded-2xl"
         style={{
           transform: isHovered
-            ? "translateX(100%) skewX(-15deg)"
-            : "translateX(-200%) skewX(-15deg)",
+            ? "translateX(110%) skewX(-15deg)"
+            : "translateX(-100%) skewX(-15deg)",
         }}
       />
 
       {/* Corner accent reveals */}
       <div
-        className="absolute top-0 right-0 w-20 h-20 bg-linear-to-br from-[#8DD1BA]/20 to-transparent rounded-2xl transition-all duration-700"
+        className="absolute top-0 right-0 h-20 bg-[#82c71324] rounded-2xl transition-all duration-300"
         style={{
-          opacity: isHovered ? 1 : 0,
-          transform: isHovered ? "scale(1)" : "scale(0.5)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-20 h-20 bg-linear-to-tr from-[#8DD1BA]/20 to-transparent rounded-2xl transition-all duration-700"
-        style={{
-          opacity: isHovered ? 1 : 0,
-          transform: isHovered ? "scale(1)" : "scale(0.5)",
+          width: isHovered ? "100%" : "0%",
         }}
       />
     </Link>

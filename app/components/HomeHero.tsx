@@ -5,8 +5,8 @@ import AnimatedLink from "./AnimatedLink";
 
 export default function HomeHero() {
   return (
-    // <div className="w-full h-screen bg-[url('/assets/HomeHeroBg.svg')] bg-cover bg-center px-5">
-    <div className="w-full h-screen bg-[url('/assets/HomeHeroBg.svg')] bg-cover bg-center px-5 animate-slow-pan bg-rotate">
+    <div className="w-full h-screen bg-[url('/assets/HomeHeroBg.svg')] bg-cover bg-center px-5">
+    {/* <div className="w-full h-screen bg-[url('/assets/HomeHeroBg.svg')] bg-cover bg-center px-5 animate-slow-pan bg-rotate"> */}
       <div className="m-auto md:pt-44 pt-40 flex flex-col items-center ">
         <h1
           style={{ fontFamily: "Poppins" }}
