@@ -42,7 +42,7 @@ export default function Diensten() {
             {title}
           </h1>
         </div>
-        <p className="text-sm text-[#4D4D4D] ">{text}</p>
+        <p className="text-sm text-[#4D4D4D] text-left ">{text}</p>
         <span
           onClick={handleReadMore}
           className="self-start text-[#4B7939] text-sm hover:underline cursor-pointer"
