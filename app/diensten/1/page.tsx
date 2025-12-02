@@ -1,4 +1,4 @@
-export default function EnergielabelsWoningbouwBestaand() {
+export default function Service1() {
   return (
     <>
       <h1>Energielabels woningbouw bestaand</h1>

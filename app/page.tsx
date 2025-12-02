@@ -5,6 +5,7 @@ import BrandList from "./components/BrandList";
 import About from "./components/About";
 import Diensten from "./components/Diensten";
 import StepPlan from "./components/StepPlan";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Diensten />
       <StepPlan />
+      <Contact/>
     </>
   );
 }

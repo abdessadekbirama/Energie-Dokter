@@ -25,7 +25,7 @@ export default function StepPlan() {
 
   return (
     <div
-      className="mb-80 bg-[linear-gradient(to_top,#FFFFFF,#F2F2CA80,#E5F0BFBF,#D0F0E7BF)] md:p-10 p-5"
+      className="bg-[linear-gradient(to_top,#FFFFFF,#F2F2CA80,#E5F0BFBF,#D0F0E7BF)] md:p-10 p-5"
       style={{ fontFamily: "Poppins" }}
     >
       <nav className="flex flex-wrap justify-center items-center gap-3 md:gap-5">

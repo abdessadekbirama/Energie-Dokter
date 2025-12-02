@@ -23,8 +23,7 @@ export default function Diensten() {
 
     const handleReadMore = (e: React.MouseEvent) => {
       e.stopPropagation();
-      // Add your read more logic here
-      console.log("Read more clicked!");
+      navigate.push("/diensten/" + href);
     };
 
     return (
