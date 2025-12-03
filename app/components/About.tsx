@@ -41,7 +41,7 @@ export default function About() {
 
   return (
     <>
-      <div className="mt-20 md:px-20 lg:px-24 px-1">
+      <div className="mt-20 md:px-20 lg:px-24 px-1 flex flex-col items-center">
         {/* First section */}
         <div className="flex items-start justify-between gap-5">
           <div className="md:w-1/2 w-1/5 mt-3">
@@ -77,7 +77,7 @@ export default function About() {
         </div>
         {/* Second Section */}
         <div
-          className="bg-[#F6F6F6] flex flex-col md:flex-row items-center justify-center py-2 mt-10 rounded-4xl md:mx-0 mx-10"
+          className="bg-[#F6F6F6] flex flex-col md:flex-row items-center justify-center py-2 mt-10 rounded-4xl md:mx-0 mx-10 md:px-0 px-10 w-fit m-auto"
           style={{ fontFamily: "Poppins" }}
         >
           {aboutStatistiques.map((stat, index) => (
