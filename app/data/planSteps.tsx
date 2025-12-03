@@ -31,7 +31,7 @@ export const planSteps = [
     {
       title: "Stap 5: Nazorg",
       content:
-        "Na afronding controleren we of de maatregelen het gewenste effect hebben. We evalueren comfort, tevredenheid van gebruikers en de prestaties van het gebouw.Zo zorgen we dat uw gebouw écht toekomstbestendig blijft.",
+        "Na afronding controleren we of de maatregelen het gewenste effect hebben. We evalueren comfort, tevredenheid van gebruikers en de prestaties van het gebouw. Zo zorgen we dat uw gebouw écht toekomstbestendig blijft.",
     },
   ],
   [
@@ -68,7 +68,7 @@ export const planSteps = [
     {
       header: (
         <>
-          Onze <span className="text-[#81C713]">energielabel</span> bij GACS
+          Onze <span className="text-[#81C713]">aanpak</span> bij GACS
         </>
       ),
       subtitle:
