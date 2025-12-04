@@ -6,6 +6,7 @@ import About from "./components/About";
 import Diensten from "./components/Diensten";
 import StepPlan from "./components/StepPlan";
 import Contact from "./components/Contact";
+import Faq from "./components/Faq";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       <About />
       <Diensten />
       <StepPlan />
-      <Contact/>
+      <Contact />
+      <Faq />
     </>
   );
 }
