@@ -3,8 +3,15 @@
 import { useState, useEffect, useRef } from "react";
 import SectionTitle from "./components/SectionTitle";
 
+interface BlogPost {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
 // Sample blog card data
-const blogPosts = [
+const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "Zonnepanelen: De toekomst van energie",
@@ -26,27 +33,18 @@ const blogPosts = [
     image:
       "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop",
   },
-//   {
-//     id: 4,
-//     title: "Warmtepompen uitgelegd",
-//     subtitle: "Alles wat u moet weten over warmtepompen",
-//     image:
-//       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
-//   },
-//   {
-//     id: 5,
-//     title: "LED verlichting voordelen",
-//     subtitle: "Waarom LED de beste keuze is voor uw woning",
-//     image:
-//       "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=400&h=300&fit=crop",
-//   },
 ];
 
-function BlogCard({ post, isActive }) {
+interface BlogCardProps {
+  post: BlogPost;
+  isActive: boolean;
+}
+
+function BlogCard({ post, isActive }: BlogCardProps) {
   return (
     <div
       className={`transition-all duration-500 ease-out h-full ${
-        isActive ? "scale-100 opacity-100" : "scale-90 opacity-"
+        isActive ? "scale-100 opacity-100" : "scale-90 opacity-50"
       }`}
     >
       <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
@@ -72,15 +70,15 @@ function BlogCard({ post, isActive }) {
 }
 
 function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const autoplayRef = useRef(null);
-  const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
+  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const totalSlides = blogPosts.length;
 
   // Create extended array for smooth infinite scrolling
-  const extendedPosts = [
+  const extendedPosts: BlogPost[] = [
     blogPosts[blogPosts.length - 1],
     ...blogPosts,
     blogPosts[0],
@@ -118,7 +116,7 @@ function Carousel() {
     setCurrentIndex((prev) => prev - 1);
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex(index);
@@ -145,7 +143,7 @@ function Carousel() {
   }, [currentIndex, isTransitioning, totalSlides]);
 
   // Get the actual display index for dot indicators
-  const getDisplayIndex = () => {
+  const getDisplayIndex = (): number => {
     if (currentIndex < 0) return totalSlides - 1;
     if (currentIndex >= totalSlides) return 0;
     return currentIndex;
@@ -178,54 +176,6 @@ function Carousel() {
             ))}
           </div>
         </div>
-
-        {/* Navigation Arrows */}
-        {/* <button
-          onClick={() => {
-            movePrev();
-            stopAutoplay();
-            startAutoplay();
-          }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
-          aria-label="Previous slide"
-        >
-          <svg
-            className="w-6 h-6 text-[#254055]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={() => {
-            moveNext();
-            stopAutoplay();
-            startAutoplay();
-          }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
-          aria-label="Next slide"
-        >
-          <svg
-            className="w-6 h-6 text-[#254055]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button> */}
       </div>
 
       {/* Dot Indicators */}
