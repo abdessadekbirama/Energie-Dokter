@@ -7,6 +7,7 @@ import Diensten from "./components/Diensten";
 import StepPlan from "./components/StepPlan";
 import Contact from "./components/Contact";
 import Faq from "./components/Faq";
+import Blog from "./Blog";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <StepPlan />
       <Contact />
       <Faq />
+      <Blog />
     </>
   );
 }

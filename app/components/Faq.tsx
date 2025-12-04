@@ -120,7 +120,7 @@ export default function Faq() {
 
   return (
     <div
-      className="my-20 flex flex-col items-center"
+      className="my-20 md:mt-28 flex flex-col items-center"
       style={{ fontFamily: "Poppins" }}
     >
       <SectionTitle
@@ -132,7 +132,7 @@ export default function Faq() {
           </div>
         }
       />
-      <div className="text-[#254055] flex gap-3 mt-13 md:max-w-3/4">
+      <div className="text-[#254055] flex gap-3 md:mt-13 mt-10 md:max-w-3/4">
         {/* services */}
         <div className="flex flex-col gap-2">
           {data.map((faq, index) => (
