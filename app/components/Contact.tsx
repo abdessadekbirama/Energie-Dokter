@@ -22,15 +22,15 @@ export default function Contact() {
               verspilling en verbeterpunten helder in kaart
             </span>
             <span>
-              <span className="font-semibold">Duidelijk rapport -</span>
+              <span className="font-semibold">Duidelijk rapport - </span>
               met meetresultaten, adviezen en prioriteiten
             </span>
             <span>
-              <span className="font-semibold">Snelinzicht -</span>
+              <span className="font-semibold">Snelinzicht - </span>
               binnen enkele werkdagen weet u waar u aan toe bent
             </span>
             <span>
-              <span className="font-semibold">Persoonlijke begeleiding -</span>
+              <span className="font-semibold">Persoonlijke begeleiding - </span>
               onze experts helpen bij elke stap
             </span>
             <span>
