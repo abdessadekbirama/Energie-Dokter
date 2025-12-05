@@ -12,6 +12,8 @@ export default function AnimatedLink({
   shimmerColor,
   fillBg,
   href,
+  textSize,
+  font,
 }: {
   text: string;
   bg: string;
@@ -22,6 +24,8 @@ export default function AnimatedLink({
   shimmerColor: string;
   fillBg: string;
   href: string;
+  textSize: string;
+  font?: number;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -79,11 +83,13 @@ export default function AnimatedLink({
 
       {/* Text with slide animation */}
       <span
-        className="relative font-medium transition-all duration-300 z-10"
+        className="relative transition-all duration-300 z-10"
         style={{
           fontFamily: "Poppins",
           transform: isHovered ? "translateX(6px)" : "translateX(0px)",
           color: textColor,
+          fontSize: textSize,
+          fontWeight: font,
         }}
       >
         {text}
