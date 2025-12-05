@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import SectionTitle from "./SectionTitle";
-import Carousel from "./Carousel";
 import AnimatedLink from "./AnimatedLink";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import CarouselSlider from "./CarouselSlider";
 
 // Sample blog card data
 
@@ -26,8 +28,8 @@ export default function Blog() {
           </div>
         }
       />
-      <div className="mt-5"></div>
-      <Carousel />
+      <CarouselSlider />
+
       <div className="w-fit m-auto">
         <AnimatedLink
           text="Zie alles"
