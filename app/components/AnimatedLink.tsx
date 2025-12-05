@@ -24,7 +24,7 @@ export default function AnimatedLink({
   shimmerColor: string;
   fillBg: string;
   href: string;
-  textSize: string;
+  textSize?: string;
   font?: number;
 }) {
   const [isHovered, setIsHovered] = useState(false);

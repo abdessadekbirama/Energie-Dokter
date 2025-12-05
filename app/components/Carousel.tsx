@@ -67,7 +67,7 @@ export default function Carousel() {
     stopAutoplay();
     autoplayRef.current = setInterval(() => {
       moveNext();
-    }, 3000);
+    }, 5000);
   };
 
   const stopAutoplay = () => {
