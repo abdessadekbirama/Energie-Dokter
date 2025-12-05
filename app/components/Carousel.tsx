@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { blogPosts } from "../data/blogs";
 
@@ -132,9 +134,7 @@ export default function Carousel() {
               transform: `translateX(calc(-${
                 (currentIndex + 1) * 33.333
               }% + ${33.333}%))`,
-              transition: isTransitioning
-                ? "transform 1s ease-in-out"
-                : "none",
+              transition: isTransitioning ? "transform 1s ease-in-out" : "none",
             }}
           >
             {extendedPosts.map((post, index) => (
@@ -168,4 +168,3 @@ export default function Carousel() {
     </div>
   );
 }
-

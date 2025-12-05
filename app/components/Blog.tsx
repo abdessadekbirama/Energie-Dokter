@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import SectionTitle from "./components/SectionTitle";
-import Carousel from "./components/Carousel";
-import AnimatedLink from "./components/AnimatedLink";
+import SectionTitle from "./SectionTitle";
+import Carousel from "./Carousel";
+import AnimatedLink from "./AnimatedLink";
 
 // Sample blog card data
 
