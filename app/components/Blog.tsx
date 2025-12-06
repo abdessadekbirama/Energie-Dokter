@@ -30,7 +30,7 @@ export default function Blog() {
       />
       <CarouselSlider />
 
-      <div className="w-fit m-auto">
+      <div className="w-fit m-auto md:scale-100 scale-80">
         <AnimatedLink
           text="Zie alles"
           bg="#63A0AC"

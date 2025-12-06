@@ -131,7 +131,7 @@ const CarouselSlider = () => {
                 h-2 rounded-xs transition-all duration-300
                 ${
                   index === selectedIndex
-                    ? "w-8 bg-[#8DD1BA]"
+                    ? "w-4 bg-[#8DD1BA]"
                     : "w-2 bg-[#D0D0D0] hover:bg-gray-400"
                 }
               `}
